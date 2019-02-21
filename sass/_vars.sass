@@ -1,2 +1,10 @@
 @import "bourbon"
 
+
+$main-color: #f39f18
+$headers-color: #2c3949
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
