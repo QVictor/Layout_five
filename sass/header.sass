@@ -99,9 +99,22 @@ b, strong
 	a
 		text-decoration: none
 		color: white
-.phone
-	opacity: 0.9
-	color: #ffffff
-	font-family: "RobotoBold", $helvetica
-	font-size: em(20px)
-	line-height: 48px
+
+.phone-wrap
+	position: relative
+	text-align: left
+	.phone
+		opacity: 0.9
+		color: #ffffff
+		font-family: "RobotoBold", $helvetica
+		font-size: em(20px)
+		line-height: 48px
+		text-align: right
+		display: inline-block
+		
+		.toggle-mnu
+			display: block
+			text-align: right
+			position: absolute
+			right: 0
+			top: 0
