@@ -27,13 +27,13 @@ h1, h2, h3, h4, h5, h6
 	text-transform: none
 
 h1
-	font-size: em(48px)	
+	font-size: em(48)	
 
 h2
-	font-size: em(30px)
+	font-size: em(30)
 
 h3
-	font-size: em(24px)
+	font-size: em(24)
 
 b, strong
 	font-family: "RalewayBold", $helvetica
@@ -52,6 +52,7 @@ b, strong
 	position: absolute
 	left: 0
 	top: 0
+
 
 .main-head
 	min-height: 620px
@@ -81,7 +82,7 @@ b, strong
 		width: 100px
 
 .main-mnu
-	font-size: em(14px)
+	font-size: em(14)
 	li
 		line-height: 48px
 		padding: 0 10px
@@ -102,19 +103,68 @@ b, strong
 
 .phone-wrap
 	position: relative
-	text-align: left
+	text-align: right
 	.phone
 		opacity: 0.9
 		color: #ffffff
 		font-family: "RobotoBold", $helvetica
-		font-size: em(20px)
+		font-size: em(20)
 		line-height: 48px
 		text-align: right
 		display: inline-block
 		
-		.toggle-mnu
-			display: block
-			text-align: right
-			position: absolute
-			right: 0
-			top: 0
+	.toggle-mnu
+		display: block
+		float: right
+		position: absolute
+		right: 0
+		top: 0
+		text-align: center
+		line-height: 48px
+
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 30px
+	margin: 22px auto 0px
+
+
+.toggle-mnu span:after,
+.toggle-mnu span:before 
+	content: ""
+	position: absolute
+	left: 0
+	top: -9px
+
+.toggle-mnu span:after
+	top: 9px
+
+.toggle-mnu span 
+	position: relative
+	display: block
+
+
+.toggle-mnu span,
+.toggle-mnu span:after,
+.toggle-mnu span:before 
+	width: 100%
+	height: 2px
+	background-color: #fff
+	transition: all 0.3s
+	backface-visibility: hidden
+	border-radius: 2px
+
+
+/* on activation */
+.toggle-mnu.on span 
+	background-color: transparent
+
+.toggle-mnu.on span:before 
+	transform: rotate(45deg) translate(5px, 5px)
+
+.toggle-mnu.on span:after 
+	transform: rotate(-45deg) translate(7px, -8px)
+
+.toggle-mnu.on + #menu 
+	opacity: 1
+	visibility: visible
