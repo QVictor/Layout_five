@@ -55,10 +55,11 @@ b, strong
 
 
 .main-head
-	min-height: 620px
+	min-height: 700px
 	background-size: cover
 	background-position: center
 	position: relative
+	// padding-bottom: 60px
 	// padding-top: 45px
 	&::before
 		@extend .before
@@ -69,6 +70,7 @@ b, strong
 
 	h1
 		text-transform: none
+		line-height: em(20)
 
 .top-line
     padding-top: 45px
@@ -168,3 +170,94 @@ b, strong
 .toggle-mnu.on + #menu 
 	opacity: 1
 	visibility: visible
+
+
+.header-wrap
+	margin-top: 40px
+	h1
+		margin-top: 120px
+		color: white
+		border-bottom: $main-color 8px solid
+		display: inline-block
+		padding-bottom: 5px
+	ul
+		@extend .ulmnu
+		margin-top: 10px
+		li
+			display: block
+			font-family: "RalewaySemiBold", $helvetica
+			font-size: 18px
+			margin-bottom: 12px
+			position: relative
+			padding-left: 18px
+			&:before
+				content: ''
+				width: 6px
+				height: 11px
+				+triangle(12px, $main-color, right)
+				position: absolute
+				top: 10px
+				left: 0
+		a
+			text-decoration: none
+			color: #fff
+			&:hover
+				text-decoration: underline
+.header-left
+	margin-bottom: 50px
+
+.button
+	padding: 5px 10px
+	background-color: $main-color
+	color: black
+	border: none
+	border-bottom: 2px solid darken($main-color, 10%)
+	font-family: "PFCentroSlabProBold", $helvetica
+	padding: 12px 30px
+	font-size: em(20)
+
+.forms
+	background-color: transparentize(#243343, .2)
+	opacity: 0.8
+	padding: 35px 35px
+	color: $form-color
+	font-size: em(14)
+	display: grid
+	h4
+		color: white
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(34)
+		text-transform: none
+		margin: 0
+	p
+		padding-right: 65px
+	label
+		font-size: em(13)
+	input
+		transition: .3s
+		padding: 8px
+		background-color: #34465a
+		border: none
+		border-top: 2px solid black
+		color: white
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: 16px
+		&:focus
+			border-top: 4px solid $main-color
+	.form-container
+		display: grid
+		padding: 5px
+		&:last-child
+			justify-content: center
+
+.arrow-wrap
+	// @extend .button-wrap
+	position: relative
+	z-index: 2
+	text-align: center	
+	.arrow-bottom
+		display: inline-block
+		width: 40px
+		height: 40px
+		background-image: url(/optim_template/start_html/_optimized_gulp_sass/app/img/arrow_down.png)
+		cursor: pointer
