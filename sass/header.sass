@@ -1,5 +1,5 @@
 @import "bourbon"
-@import "vars.sass"
+@import "_vars.sass"
 
 body
 	font-size: 15px
@@ -25,6 +25,7 @@ a, a:hover, a:focus, a:active
 h1, h2, h3, h4, h5, h6
 	@extend .headers
 	text-transform: none
+	line-height: em(22)
 
 h1
 	font-size: em(48)	
@@ -67,7 +68,6 @@ b, strong
 		background: linear-gradient(180deg, darken(#394b5f,20%) 20%, #394b5f 70%)
 		// background: linear-gradient(90deg, #394b5f, $darker(#394b5f,20))
 		opacity: .85
-
 	h1
 		text-transform: none
 		line-height: em(20)
@@ -203,6 +203,7 @@ b, strong
 			color: #fff
 			&:hover
 				text-decoration: underline
+
 .header-left
 	margin-bottom: 50px
 
@@ -215,6 +216,20 @@ b, strong
 	font-family: "PFCentroSlabProBold", $helvetica
 	padding: 12px 30px
 	font-size: em(20)
+	transition: all .25s ease
+	color: #000
+	text-decoration: none
+	&:hover
+		background-color: #ffb338
+		text-decoration: none
+		color: #111
+	&:active
+		background-color: #db8c0e
+		text-decoration: none
+		color: #111
+	&:focus
+		color: #111
+		text-decoration: none
 
 .forms
 	background-color: transparentize(#243343, .2)
@@ -251,13 +266,68 @@ b, strong
 			justify-content: center
 
 .arrow-wrap
-	// @extend .button-wrap
 	position: relative
 	z-index: 2
-	text-align: center	
+	text-align: center
+	padding-top: 10px
+	padding-bottom: 10px
 	.arrow-bottom
 		display: inline-block
 		width: 40px
 		height: 40px
-		background-image: url(/optim_template/start_html/_optimized_gulp_sass/app/img/arrow_down.png)
+		background-image: url(../img/arrow_down.png)
 		cursor: pointer
+		opacity: .7
+		transition: all .35s ease
+		&:hover
+			opacity: 1
+
+.homesect
+	padding-top: 70px
+	background-color: #f9f9f9
+	position: relative
+	a
+		&:hover
+			text-decoration: none
+	.section-head
+		margin-bottom: 65px
+		p
+			margin-top: 60px
+			a
+				font-family: "RalevayBold", $helvetica
+		h2
+			text-align: center
+			position: relative
+			&::after
+				position: absolute
+				content: ''
+				height: 4px
+				background-color: $main-color
+				width: 165px
+				display: block
+				bottom: -30px
+				left: 50%
+				transform: translate(-50%, 0)
+	// Рамка доделать!
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		top: -6px
+		right: 0
+		width: 100%
+		// background-repeat: repeat
+		height: 6px
+		// background-size: 20px 20px
+		background-image: url(../img/bah_1.png)
+		// background-image: radial-gradient(circle at 10px -5px, transparent 12px, #000 13px)
+
+.section-bottom
+	margin-top: 70px
+	background-color: #e5e5e5
+	position: 50px 0
+	text-align: center
+	padding: 60px 0
+
+//ALWAYS END
+@import "media"

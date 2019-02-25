@@ -1,4 +1,4 @@
-@import "bourbon"
+﻿@import "bourbon"
 @import "vars.sass"
 
 //Load Libs SASS
@@ -29,6 +29,81 @@ body textarea:required:valid
 
 //Custom Styles Here
 
+.section_1
+	.section-content
+		background-image: url(../img/s1_gray_bg.png)
+		background-repeat: no-repeat
+		background-position: top
 
+.section-content
+	position: relative
+	padding-bottom: 90px
+	.info-item-wrap
+		&:nth-child(4), &:last-child(),
+			margin-bottom: 0
+
+.s1-bottom-triangle
+	height: 90px
+	position: absolute
+	bottom: 0
+	z-index: 2
+	width: 100%
+	background-image: url(../img/s1_triangle.svg)
+	background-position: top
+	background-size: 100% 100%
+	text-align: center
+	.triangle-logo
+		width: 116px
+		margin-top: 30px
+
+
+.s1-bottom	
+	padding: 15px 0 65px
+	background-color: #394b5f
+	color: white
+	.info-item
+		margin: 15px 0 0
+		p
+			color: #fff
+			border-color: #546476	
+	.info-item-wrap:nth-child(2)
+		.info-item
+			margin-top: 34px
+
+
+.info-item
+	padding-left: 34px
+	max-width: 264px
+	line-height: em(19)
+	margin: 54px 0
+	&:nth-child(2)
+		margin-top: 0
+	h4
+		margin-top: 0
+		margin-bottom: 10px
+		a
+			font-size: em(24)
+			line-height: em(13)
+			text-decoration: underline
+			text-transform: none
+		p
+			font-size: em(16)
+	p
+		font-size: em(16)
+		border-bottom: #dee1e5 1px solid
+		padding-bottom: 20px
+	
+.info-item-wrap:nth-child(2)
+	.info-item
+		margin-top: 0
+
+.scales
+	width: 160px
+	position: absolute
+	top: -130px
+	left: 50%
+	transform: translate(-50%, 0)
+	z-index: -1
+	
 //ALWAYS END
 @import "media"
